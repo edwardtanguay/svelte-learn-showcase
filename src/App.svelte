@@ -23,13 +23,13 @@
 			<section>
 				<Ex003HtmlRenderTest />
 				<Ex004EachBlock />
-				<Ex005AsyncTest/>
-				<Ex006SimpleAsync/>
-				<Ex007MovePointer/>
+				<Ex005AsyncTest />
+				<Ex006SimpleAsync />
+				<Ex007MovePointer />
 			</section>
 		</section>
 		<div class="border-t border-gray-400 mt-8 pt-3">
-			<a href="#top">^ top</a>
+			<a href="#top" class="underline">jump to top</a>
 		</div>
 		<a id="bottom"> </a>
 	</a>
