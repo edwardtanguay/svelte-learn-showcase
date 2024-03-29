@@ -38,6 +38,29 @@
 		},
 	];
 	let selectedSize = "medium";
+	let toppingOptions = [
+		{
+			idCode: "extraCheese",
+			title: "extra cheese",
+			price: 1
+		},
+		{
+			idCode: "jalopenos",
+			title: "jalapeños",
+			price: 1
+		},
+		{
+			idCode: "greenOlives",
+			title: "green olives",
+			price: .5
+		},
+		{
+			idCode: "pineapples",
+			title: "pine apples",
+			price: 1.5
+		}
+	];
+	let selectedToppings: string[] = [];
 
 	$: rangeMessage = `${range} (${((range / 25) * 100).toFixed(0)}%)`;
 	$: sendNewsletterMessage = sendNewsletter
@@ -47,6 +70,7 @@
 		(m) => m.idCode === selectedSendOption
 	)?.note;
 	$: sizeMessage = sizeOptions.find(m => m.idCode === selectedSize)?.description;
+	$: toppingMessage = `There are ${selectedToppings.length} toppings.`
 
 	const initialFocus = (el: HTMLInputElement) => {
 		el.focus();
@@ -107,5 +131,22 @@
 				{/each}
 		</div>
 		<p class="font-mono mt-2 bg-yellow-200">{sizeMessage}</p>
+	</div>
+	<div class="bg-yellow-300 p-3 rounded mt-1 mb-1">
+		<div class="flex gap-2">
+				{#each toppingOptions as toppingOption}
+					<div>
+			<label class="cursor-pointer select-none" for={toppingOption.idCode}
+				><input
+					type="checkbox"
+					bind:group={selectedToppings}
+					value={toppingOption}
+					id={toppingOption.idCode}
+				/> {toppingOption.title}</label
+			>
+					</div>
+				{/each}
+		</div>
+		<p class="font-mono mt-2 bg-yellow-200">{toppingMessage}</p>
 	</div>
 </fieldset>
