@@ -21,5 +21,10 @@
 			class="bg-gray-300 py-1 px-3 text-black rounded"
 			>add random number</button
 		>
+		{#if nums.length > 10}
+			<p class="text-red-600">You now have more than ten numbers.</p>
+		{:else}
+			<p>Please add some numbers.</p>
+		{/if}
 	</p>
 </fieldset>
