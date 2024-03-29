@@ -13,7 +13,7 @@ export const getEmployees = async () => {
 			} else {
 				reject("Error fetching data.");
 			}
-		}, 3000);
+		}, 0); // change to 1000 = 1 second, etc.
 	});
 };
 
