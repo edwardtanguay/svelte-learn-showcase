@@ -23,6 +23,5 @@
 		style="opacity: {clickedOnce ? '0.5' : ''}; cursor: {clickedOnce
 			? 'default'
 			: 'pointer'}"
-		on:click|once={(e) => handleChangeMessage(e)}>change message</button
-	>
+		on:click|once={(e) => handleChangeMessage(e)}>change message</button>
 </fieldset>
