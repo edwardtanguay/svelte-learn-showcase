@@ -61,6 +61,7 @@
 		},
 	];
 	let selectedToppings: any[] = [];
+	let productDescription = '';
 
 	$: rangeMessage = `${range} (${((range / 25) * 100).toFixed(0)}%)`;
 	$: sendNewsletterMessage = sendNewsletter
@@ -72,23 +73,24 @@
 	$: sizeMessage = sizeOptions.find(
 		(m) => m.idCode === selectedSize
 	)?.description;
-	$: toppingMessage = `You selected ${selectedToppings.length} toppings for the price of ${selectedToppings.reduce(
-		(total, selectedTopping) => {
+	$: toppingMessage = `You selected ${selectedToppings.length} toppings for the price of ${selectedToppings
+		.reduce((total, selectedTopping) => {
 			const topping = toppingOptions.find(
-				(m) => m.idCode === selectedTopping.idCode);
-				console.log(topping);
+				(m) => m.idCode === selectedTopping.idCode
+			);
+			console.log(topping);
 			if (topping) {
-				console.log('in here');
+				console.log("in here");
 				total = total + topping.price;
 			}
 			return total;
-		},
-		0
-	).toFixed(2)} €.`;
+		}, 0)
+		.toFixed(2)} €.`;
 
 	const initialFocus = (el: HTMLInputElement) => {
 		el.focus();
 	};
+	$:productDescriptionMessage = `Total length is ${productDescription.trim().length} characters.`; 
 </script>
 
 <fieldset
@@ -173,5 +175,10 @@
 			{/each}
 		</div>
 		<p class="font-mono mt-2 bg-yellow-200 py-1 px-2">{toppingMessage}</p>
+	</div>
+	<div class="bg-yellow-300 p-3 rounded mt-1 mb-1">
+		<p class="mb-1">Product Description:</p>
+		<textarea class="w-full" bind:value={productDescription} spellcheck="false" />
+		<p class="font-mono mt-2 bg-yellow-200 py-1 px-2">{productDescriptionMessage}</p>
 	</div>
 </fieldset>

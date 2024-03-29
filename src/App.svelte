@@ -42,9 +42,9 @@
 				<Ex009EventDispatcher
 					on:productPurchased={handleProductPurchased}
 				/>
+				{@html parentMessageFor009}
 			</section>
 			<section>
-				{@html parentMessageFor009}
 				<Ex010Bindings />
 			</section>
 		</section>
