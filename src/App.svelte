@@ -36,16 +36,16 @@
 				<Ex003HtmlRenderTest />
 				<Ex004EachBlock />
 				<Ex005AsyncTest />
-			</section>
-			<section>
 				<Ex006SimpleAsync />
 				<Ex007MovePointer />
 				<Ex008ClickOnce />
 				<Ex009EventDispatcher
 					on:productPurchased={handleProductPurchased}
 				/>
+			</section>
+			<section>
 				{@html parentMessageFor009}
-				<Ex010Bindings/>
+				<Ex010Bindings />
 			</section>
 		</section>
 		<div class="border-t border-gray-400 mt-8 pt-3">
