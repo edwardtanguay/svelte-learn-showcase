@@ -1,4 +1,5 @@
 <script lang="ts">
+	import AsyncTest from "./components/AsyncTest.svelte";
 	import EachBlock from "./components/EachBlock.svelte";
 	import Header from "./components/Header.svelte";
 	import HtmlRenderTest from "./components/HtmlRenderTest.svelte";
@@ -17,6 +18,7 @@
 			<Runner />
 		</section>
 		<section>
+			<AsyncTest/>
 			<EachBlock />
 			<HtmlRenderTest />
 			<InteractiveTest />
