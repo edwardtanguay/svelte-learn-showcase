@@ -8,7 +8,19 @@
 	import Ex006SimpleAsync from "./components/Ex006SimpleAsync.svelte";
 	import Ex007MovePointer from "./components/Ex007MovePointer.svelte";
 	import Ex008ClickOnce from "./components/Ex008ClickOnce.svelte";
+	import Ex009EventDispatcher from "./components/Ex009EventDispatcher.svelte";
 	import Header from "./components/Header.svelte";
+
+	let parentMessageFor009 = "";
+
+	const handleProductPurchased = (e: any) => {
+		console.log(e);
+		parentMessageFor009 = `parent knows about purchase: 
+		<div class="border border-gray-700 rounded px-3 py-1 bg-gray-300 font-mono">
+			<p>Product: ${e.detail.product.title}</p>
+			<p>Price: ${e.detail.product.price}€</p>
+		</div>`;
+	};
 </script>
 
 <main>
@@ -20,14 +32,18 @@
 				<Ex001InteractiveTest />
 				<Ex002InteractiveArray />
 				<Ex002InteractiveArray nums={[5, 6, 7]} />
-			</section>
-			<section>
 				<Ex003HtmlRenderTest />
 				<Ex004EachBlock />
 				<Ex005AsyncTest />
+			</section>
+			<section>
 				<Ex006SimpleAsync />
 				<Ex007MovePointer />
 				<Ex008ClickOnce />
+				<Ex009EventDispatcher
+					on:productPurchased={handleProductPurchased}
+				/>
+				{@html parentMessageFor009}
 			</section>
 		</section>
 		<div class="border-t border-gray-400 mt-8 pt-3">
