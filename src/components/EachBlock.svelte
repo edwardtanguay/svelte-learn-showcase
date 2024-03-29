@@ -5,6 +5,10 @@
 	const chooseColor = (color: string) => {
 		selectedColor = color;
 	};
+
+	const deleteFirstColor = () => {
+		alert("del");
+	};
 </script>
 
 <fieldset class="border border-gray-400 mt-5 rounded w-fit px-3 pb-3 h-fit">
@@ -26,4 +30,8 @@
 			>
 		{/each}
 	</div>
+	<button
+		class="bg-gray-300 font-bold py-1 px-3 rounded mt-3"
+		on:click={() => deleteFirstColor()}>delete first color</button
+	>
 </fieldset>
