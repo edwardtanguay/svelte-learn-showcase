@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { getEmployees } from "../tools";
-	const skillsPromise = getEmployees();
+	import { getSkills } from "../appData";
+
+	const skillsPromise = getSkills();
 	
 </script>
 

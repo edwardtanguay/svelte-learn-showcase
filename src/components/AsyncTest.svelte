@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { getEmployees } from "../tools";
+	import { getEmployees } from "../appData";
 	const employeesPromise = getEmployees();
 </script>
 

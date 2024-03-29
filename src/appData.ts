@@ -1,4 +1,5 @@
-import { type Employee } from "./types";
+import axios from "axios";
+import { type Employee, type Skill } from "./types";
 
 export const getEmployees = async () => {
 	return new Promise<Employee[]>((resolve, reject) => {
@@ -13,5 +14,19 @@ export const getEmployees = async () => {
 				reject("Error fetching data.");
 			}
 		}, 0);
+	});
+};
+
+export const getSkills = async () => {
+	return new Promise<Skill[]>((resolve) => {
+		(async () => {
+			resolve(
+				(
+					await axios.get(
+						"https://edwardtanguay.vercel.app/share/skills.json"
+					)
+				).data
+			);
+		})();
 	});
 };
