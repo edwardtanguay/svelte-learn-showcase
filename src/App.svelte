@@ -9,6 +9,7 @@
 	import Ex007MovePointer from "./components/Ex007MovePointer.svelte";
 	import Ex008ClickOnce from "./components/Ex008ClickOnce.svelte";
 	import Ex009EventDispatcher from "./components/Ex009EventDispatcher.svelte";
+	import Ex010Bindings from "./components/Ex010Bindings.svelte";
 	import Header from "./components/Header.svelte";
 
 	let parentMessageFor009 = "";
@@ -44,6 +45,7 @@
 					on:productPurchased={handleProductPurchased}
 				/>
 				{@html parentMessageFor009}
+				<Ex010Bindings/>
 			</section>
 		</section>
 		<div class="border-t border-gray-400 mt-8 pt-3">
