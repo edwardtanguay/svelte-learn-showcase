@@ -5,6 +5,7 @@
 	import HtmlRenderTest from "./components/HtmlRenderTest.svelte";
 	import InteractiveArray from "./components/InteractiveArray.svelte";
 	import InteractiveTest from "./components/InteractiveTest.svelte";
+	import MovePointer from "./components/MovePointer.svelte";
 	import Runner from "./components/Runner.svelte";
 	import SimpleAsync from "./components/SimpleAsync.svelte";
 
@@ -19,6 +20,7 @@
 			<Runner />
 		</section>
 		<section>
+			<MovePointer/>
 			<SimpleAsync/>
 			<AsyncTest/>
 			<EachBlock />
