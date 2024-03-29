@@ -6,8 +6,8 @@
 	import Ex004EachBlock from "./components/Ex004EachBlock.svelte";
 	import Ex005AsyncTest from "./components/Ex005AsyncTest.svelte";
 	import Ex006SimpleAsync from "./components/Ex006SimpleAsync.svelte";
+	import Ex007MovePointer from "./components/Ex007MovePointer.svelte";
 	import Header from "./components/Header.svelte";
-	import MovePointer from "./components/MovePointer.svelte";
 </script>
 
 <main>
@@ -25,7 +25,7 @@
 				<Ex004EachBlock />
 				<Ex005AsyncTest/>
 				<Ex006SimpleAsync/>
-				<MovePointer />
+				<Ex007MovePointer/>
 			</section>
 		</section>
 		<div class="border-t border-gray-400 mt-8 pt-3">
