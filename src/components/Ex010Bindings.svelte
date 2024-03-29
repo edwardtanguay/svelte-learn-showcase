@@ -2,11 +2,30 @@
 	let comment = "none";
 	let range = 5;
 	let sendNewsletter = false;
+	const sendOptions = [
+		{
+			idCode: "surface",
+			title: "Surface mail",
+			note: "this is the least expensive method"
+		},
+		{
+			idCode: "air",
+			title: "Air mail",
+			note: "this will go by plane"
+		},
+		{
+			idCode: "speed",
+			title: "Speed delivery",
+			note: "this is the fastest method"
+		}
+	];
+	let selectedSendOption = 'air';
 
 	$: rangeMessage = `${range} (${((range / 25) * 100).toFixed(0)}%)`;
 	$: sendNewsletterMessage = sendNewsletter
 		? "Send the newsletter."
 		: "Don't send the newsletter.";
+	$: sendOptionMessage = sendOptions.find(m=> m.idCode === selectedSendOption)?.note;
 
 	const initialFocus = (el: HTMLInputElement) => {
 		el.focus();
@@ -34,5 +53,15 @@
 			<label class="cursor-pointer select-none" for="sendNewsletter"><input type="checkbox" bind:checked={sendNewsletter} id="sendNewsletter" /> Please send me the newsletter.</label>
 		</div>
 		<p class="font-mono mt-2 bg-yellow-200">{sendNewsletterMessage}</p>
+	</div>
+	<div class="bg-yellow-300 p-3 rounded mt-1 mb-1">
+		<div class="flex gap-2">
+			<select class="py-1 px-2 rounded" bind:value={selectedSendOption}>
+				{#each sendOptions as sendOption }
+					<option value={sendOption.idCode}>{sendOption.title}</option>
+				{/each}
+			</select>
+		</div>
+		<p class="font-mono mt-2 bg-yellow-200">{sendOptionMessage}</p>
 	</div>
 </fieldset>
