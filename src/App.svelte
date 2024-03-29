@@ -6,6 +6,7 @@
 	import InteractiveArray from "./components/InteractiveArray.svelte";
 	import InteractiveTest from "./components/InteractiveTest.svelte";
 	import Runner from "./components/Runner.svelte";
+	import SimpleAsync from "./components/SimpleAsync.svelte";
 
 	const image = "images/moliere.png";
 </script>
@@ -18,6 +19,7 @@
 			<Runner />
 		</section>
 		<section>
+			<SimpleAsync/>
 			<AsyncTest/>
 			<EachBlock />
 			<HtmlRenderTest />

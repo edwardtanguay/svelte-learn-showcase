@@ -12,6 +12,6 @@ export const getEmployees = async () => {
 			} else {
 				reject("Error fetching data.");
 			}
-		}, 3000);
+		}, 0);
 	});
 };
