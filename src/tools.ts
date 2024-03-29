@@ -1,5 +1,7 @@
+import { type Employee } from "./types";
+
 export const getEmployees = async () => {
-	return new Promise((resolve, reject) => {
+	return new Promise<Employee[]>((resolve, reject) => {
 		setTimeout(async () => {
 			const response = await fetch(
 				"https://edwardtanguay.vercel.app/share/employees.json"
@@ -10,6 +12,6 @@ export const getEmployees = async () => {
 			} else {
 				reject("Error fetching data.");
 			}
-		}, 2000);
+		}, 3000);
 	});
 };
