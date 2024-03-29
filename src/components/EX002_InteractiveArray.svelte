@@ -12,7 +12,7 @@
 </script>
 
 <fieldset class="border border-gray-400 mt-5 rounded w-fit px-3 h-fit">
-	<legend class="font-mono text-gray-500">Interactive Test #2</legend>
+	<legend class="font-mono text-gray-500">EX002_InteractiveArray</legend>
 	<p class="mb-2">{nums.join(", ")}</p>
 	<p class="mb-2">sum = {sum}</p>
 	<p class="mb-2">
