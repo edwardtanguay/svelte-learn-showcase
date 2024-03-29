@@ -1,5 +1,6 @@
 <script lang="ts">
-	import Header from "./components/Header.svelte";
+	import EachBlock from "./components/EachBlock.svelte";
+import Header from "./components/Header.svelte";
 	import HtmlRenderTest from "./components/HtmlRenderTest.svelte";
 	import InteractiveArray from "./components/InteractiveArray.svelte";
 	import InteractiveTest from "./components/InteractiveTest.svelte";
@@ -20,6 +21,7 @@
 			<InteractiveTest />
 			<InteractiveArray />
 			<InteractiveArray nums={[5,6,7]} />
+			<EachBlock/>
 		</section>
 	</section>
 </main>
