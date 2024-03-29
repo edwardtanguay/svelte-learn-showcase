@@ -1,13 +1,14 @@
 <script lang="ts">
 	let selectedColor = "";
-	const colors = ["red", "green", "blue", "brown", "purple"];
+	let colors = ["red", "green", "blue", "brown", "purple"];
 
 	const chooseColor = (color: string) => {
 		selectedColor = color;
 	};
 
 	const deleteFirstColor = () => {
-		alert("del");
+		colors = colors.slice(1);
+		console.log(colors);
 	};
 </script>
 
@@ -30,8 +31,12 @@
 			>
 		{/each}
 	</div>
+	{#if colors.length !== 0}
 	<button
 		class="bg-gray-300 font-bold py-1 px-3 rounded mt-3"
 		on:click={() => deleteFirstColor()}>delete first color</button
 	>
+	{:else}
+		<p>no colors left</p>
+	{/if}
 </fieldset>
