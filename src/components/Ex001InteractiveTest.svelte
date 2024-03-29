@@ -11,7 +11,7 @@
 </script>
 
 <fieldset class="border border-gray-400 mt-5 rounded w-fit px-3 h-fit">
-	<legend class="font-mono text-gray-500">EX001_InteractiveTest</legend>
+	<legend class="font-mono text-gray-500">Ex001InteractiveTest</legend>
 	<p class="mb-2">{message}</p>
 	<p class="mb-2">{@html decoratedMessage()}</p>
 	<p class="mb-2">

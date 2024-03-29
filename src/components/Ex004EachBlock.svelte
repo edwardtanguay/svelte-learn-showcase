@@ -13,7 +13,7 @@
 </script>
 
 <fieldset class="border border-gray-400 mt-5 rounded w-fit px-3 pb-3 h-fit">
-	<legend class="font-mono text-gray-500">EX004_EachBlock</legend>
+	<legend class="font-mono text-gray-500">Ex004EachBlock</legend>
 	{#if selectedColor !== ""}
 		<p class="mb-3">
 			Choosen color: <span
