@@ -1,10 +1,10 @@
 <script lang="ts">
-	import Ex000_Images from "./components/EX000_Images.svelte";
-	import Ex001_InteractiveTest from "./components/EX001_InteractiveTest.svelte";
-	import EX002_InteractiveArray from "./components/EX002_InteractiveArray.svelte";
-	import Ex003_HtmlRenderTest from "./components/EX003_HtmlRenderTest.svelte";
-	import Ex004_EachBlock from "./components/EX004_EachBlock.svelte";
-	import AsyncTest from "./components/AsyncTest.svelte";
+	import Ex000Images from "./components/Ex000Images.svelte";
+	import Ex001InteractiveTest from "./components/Ex001InteractiveTest.svelte";
+	import EX002InteractiveArray from "./components/Ex002InteractiveArray.svelte";
+	import Ex003HtmlRenderTest from "./components/Ex003HtmlRenderTest.svelte";
+	import Ex004EachBlock from "./components/Ex004EachBlock.svelte";
+	import Ex005AsyncTest from "./components/Ex005AsyncTest.svelte";
 	import Header from "./components/Header.svelte";
 	import MovePointer from "./components/MovePointer.svelte";
 	import SimpleAsync from "./components/SimpleAsync.svelte";
@@ -15,17 +15,17 @@
 		<Header />
 		<section class="flex gap-6">
 			<section>
-				<Ex000_Images />
-				<Ex001_InteractiveTest />
-				<EX002_InteractiveArray />
-				<EX002_InteractiveArray nums={[5, 6, 7]} />
+				<Ex000Images />
+				<Ex001InteractiveTest />
+				<EX002InteractiveArray />
+				<EX002InteractiveArray nums={[5, 6, 7]} />
 			</section>
 			<section>
-				<Ex003_HtmlRenderTest />
-				<Ex004_EachBlock />
+				<Ex003HtmlRenderTest />
+				<Ex004EachBlock />
+				<Ex005AsyncTest/>
 				<MovePointer />
 				<SimpleAsync />
-				<AsyncTest />
 			</section>
 		</section>
 		<div class="border-t border-gray-400 mt-8 pt-3">

@@ -4,7 +4,7 @@
 </script>
 
 <fieldset class="border border-gray-400 mt-5 rounded w-fit px-3 h-fit">
-	<legend class="font-mono text-gray-500">HTML Render Test</legend>
+	<legend class="font-mono text-gray-500">Ex005AsyncText</legend>
 	{#await employeesPromise}
 		<p class="mb-3">Employees loading...</p>
 	{:then employees}
