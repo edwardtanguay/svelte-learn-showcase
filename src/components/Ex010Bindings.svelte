@@ -24,17 +24,17 @@
 		{
 			idCode: "small",
 			title: "Small",
-			description: "1/4 liter"
+			description: "1/4 liter",
 		},
 		{
 			idCode: "medium",
 			title: "Medium",
-			description: "1/2 liter"
+			description: "1/2 liter",
 		},
 		{
 			idCode: "large",
 			title: "Large",
-			description: "1 liter"
+			description: "1 liter",
 		},
 	];
 	let selectedSize = "medium";
@@ -42,25 +42,25 @@
 		{
 			idCode: "extraCheese",
 			title: "extra cheese",
-			price: 1
+			price: 1,
 		},
 		{
 			idCode: "jalopenos",
 			title: "jalapeños",
-			price: 1
+			price: 1,
 		},
 		{
 			idCode: "greenOlives",
 			title: "green olives",
-			price: .5
+			price: 0.5,
 		},
 		{
 			idCode: "pineapples",
 			title: "pine apples",
-			price: 1.5
-		}
+			price: 1.5,
+		},
 	];
-	let selectedToppings: string[] = [];
+	let selectedToppings: any[] = [];
 
 	$: rangeMessage = `${range} (${((range / 25) * 100).toFixed(0)}%)`;
 	$: sendNewsletterMessage = sendNewsletter
@@ -69,8 +69,22 @@
 	$: sendOptionMessage = sendOptions.find(
 		(m) => m.idCode === selectedSendOption
 	)?.note;
-	$: sizeMessage = sizeOptions.find(m => m.idCode === selectedSize)?.description;
-	$: toppingMessage = `There are ${selectedToppings.length} toppings.`
+	$: sizeMessage = sizeOptions.find(
+		(m) => m.idCode === selectedSize
+	)?.description;
+	$: toppingMessage = `You selected ${selectedToppings.length} toppings for the price of ${selectedToppings.reduce(
+		(total, selectedTopping) => {
+			const topping = toppingOptions.find(
+				(m) => m.idCode === selectedTopping.idCode);
+				console.log(topping);
+			if (topping) {
+				console.log('in here');
+				total = total + topping.price;
+			}
+			return total;
+		},
+		0
+	).toFixed(2)} €.`;
 
 	const initialFocus = (el: HTMLInputElement) => {
 		el.focus();
@@ -83,7 +97,7 @@
 	<legend class="font-mono text-gray-500">Ex010Bindings</legend>
 	<div class="bg-yellow-300 p-3 rounded mt-1 mb-1">
 		Comment: <input type="text" bind:value={comment} use:initialFocus />
-		<p class="font-mono mt-2 bg-yellow-200">{comment}</p>
+		<p class="font-mono mt-2 bg-yellow-200 py-1 px-2">{comment}</p>
 	</div>
 	<div class="bg-yellow-300 p-3 rounded mt-1 mb-1">
 		<div class="flex gap-2">
@@ -91,7 +105,7 @@
 			<input type="range" min="0" max="25" bind:value={range} />
 			<div>25</div>
 		</div>
-		<p class="font-mono mt-2 bg-yellow-200">{rangeMessage}</p>
+		<p class="font-mono mt-2 bg-yellow-200 py-1 px-2">{rangeMessage}</p>
 	</div>
 	<div class="bg-yellow-300 p-3 rounded mt-1 mb-1">
 		<div class="flex gap-2">
@@ -103,7 +117,9 @@
 				/> Please send me the newsletter.</label
 			>
 		</div>
-		<p class="font-mono mt-2 bg-yellow-200">{sendNewsletterMessage}</p>
+		<p class="font-mono mt-2 bg-yellow-200 py-1 px-2">
+			{sendNewsletterMessage}
+		</p>
 	</div>
 	<div class="bg-yellow-300 p-3 rounded mt-1 mb-1">
 		<div class="flex gap-2">
@@ -114,39 +130,48 @@
 				{/each}
 			</select>
 		</div>
-		<p class="font-mono mt-2 bg-yellow-200">{sendOptionMessage}</p>
+		<p class="font-mono mt-2 bg-yellow-200 py-1 px-2">
+			{sendOptionMessage}
+		</p>
 	</div>
 	<div class="bg-yellow-300 p-3 rounded mt-1 mb-1">
 		<div class="flex gap-2">
-				{#each sizeOptions as sizeOption}
-					<div>
-						<input
-							type="radio"
-							id={sizeOption.idCode}
-							value={sizeOption.idCode}
-							bind:group = {selectedSize}
+			{#each sizeOptions as sizeOption}
+				<div>
+					<input
+						type="radio"
+						id={sizeOption.idCode}
+						value={sizeOption.idCode}
+						bind:group={selectedSize}
+					/>
+					<label
+						class="select-none cursor-pointer"
+						for={sizeOption.idCode}>{sizeOption.title}</label
+					>
+				</div>
+			{/each}
+		</div>
+		<p class="font-mono mt-2 bg-yellow-200 py-1 px-2">{sizeMessage}</p>
+	</div>
+	<div class="bg-yellow-300 p-3 rounded mt-1 mb-1">
+		<div class="flex gap-2 flex-col mb-3">
+			{#each toppingOptions as toppingOption}
+				<div>
+					<label
+						class="cursor-pointer select-none"
+						for={toppingOption.idCode}
+						><input
+							type="checkbox"
+							bind:group={selectedToppings}
+							value={toppingOption}
+							id={toppingOption.idCode}
 						/>
-						<label class="select-none cursor-pointer" for={sizeOption.idCode}>{sizeOption.title}</label>
-					</div>
-				{/each}
+						{toppingOption.title} - {toppingOption.price.toFixed(2)}
+						€</label
+					>
+				</div>
+			{/each}
 		</div>
-		<p class="font-mono mt-2 bg-yellow-200">{sizeMessage}</p>
-	</div>
-	<div class="bg-yellow-300 p-3 rounded mt-1 mb-1">
-		<div class="flex gap-2">
-				{#each toppingOptions as toppingOption}
-					<div>
-			<label class="cursor-pointer select-none" for={toppingOption.idCode}
-				><input
-					type="checkbox"
-					bind:group={selectedToppings}
-					value={toppingOption}
-					id={toppingOption.idCode}
-				/> {toppingOption.title}</label
-			>
-					</div>
-				{/each}
-		</div>
-		<p class="font-mono mt-2 bg-yellow-200">{toppingMessage}</p>
+		<p class="font-mono mt-2 bg-yellow-200 py-1 px-2">{toppingMessage}</p>
 	</div>
 </fieldset>
