@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Header from "./components/Header.svelte";
 	import HtmlRenderTest from "./components/HtmlRenderTest.svelte";
+	import InteractiveArray from "./components/InteractiveArray.svelte";
 	import InteractiveTest from "./components/InteractiveTest.svelte";
 	import Runner from "./components/Runner.svelte";
 
@@ -17,6 +18,7 @@
 		<section>
 			<HtmlRenderTest />
 			<InteractiveTest />
+			<InteractiveArray/>
 		</section>
 	</section>
 </main>
