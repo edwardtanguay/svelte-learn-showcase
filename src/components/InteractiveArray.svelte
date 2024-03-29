@@ -1,5 +1,5 @@
 <script lang="ts">
-	let nums = [9, 2, 1, 4];
+	export let nums = [9, 2, 1, 4];
 
 	const addNumber = () => {
 		nums = [...nums, Math.floor(Math.random() * 10) + 1];

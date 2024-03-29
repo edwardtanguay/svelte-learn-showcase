@@ -18,7 +18,8 @@
 		<section>
 			<HtmlRenderTest />
 			<InteractiveTest />
-			<InteractiveArray/>
+			<InteractiveArray />
+			<InteractiveArray nums={[5,6,7]} />
 		</section>
 	</section>
 </main>
