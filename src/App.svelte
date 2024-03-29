@@ -1,10 +1,10 @@
 <script lang="ts">
 	import AsyncTest from "./components/AsyncTest.svelte";
+	import Ex001InteractiveTest from "./components/EX001_InteractiveTest.svelte";
 	import EachBlock from "./components/EachBlock.svelte";
 	import Header from "./components/Header.svelte";
 	import HtmlRenderTest from "./components/HtmlRenderTest.svelte";
 	import InteractiveArray from "./components/InteractiveArray.svelte";
-	import InteractiveTest from "./components/InteractiveTest.svelte";
 	import MovePointer from "./components/MovePointer.svelte";
 	import Runner from "./components/Runner.svelte";
 	import SimpleAsync from "./components/SimpleAsync.svelte";
@@ -25,9 +25,9 @@
 			<AsyncTest/>
 			<EachBlock />
 			<HtmlRenderTest />
-			<InteractiveTest />
-			<InteractiveArray />
 			<InteractiveArray nums={[5, 6, 7]} />
+			<InteractiveArray />
+			<Ex001InteractiveTest/>
 		</section>
 	</section>
 </main>
