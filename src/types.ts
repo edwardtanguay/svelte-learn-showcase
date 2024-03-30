@@ -9,6 +9,6 @@ export type Skill = {
 };
 
 export type Cart = {
-	userId: number;
+	cartId: number;
 	products: string[];
 };
