@@ -47,9 +47,9 @@
 				{@html parentMessageFor009}
 			</section>
 			<section>
+				<Ex010Bindings />
 				<Ex011StoreShop />
 				<Ex012StoreDashboard />
-				<Ex010Bindings />
 			</section>
 		</section>
 		<div class="border-t border-gray-400 mt-8 pt-3">
