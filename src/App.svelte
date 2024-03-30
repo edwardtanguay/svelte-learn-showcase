@@ -13,6 +13,7 @@
 	import Ex011StoreShop from "./components/Ex011StoreShop.svelte";
 	import Ex012StoreDashboard from "./components/Ex012StoreDashboard.svelte";
 	import Ex013AnimationTest from "./components/Ex013AnimationTest.svelte";
+	import Ex014FadeTest from "./components/Ex014FadeTest.svelte";
 	import Header from "./components/Header.svelte";
 
 	let parentMessageFor009 = "";
@@ -48,10 +49,11 @@
 				{@html parentMessageFor009}
 			</section>
 			<section>
-				<Ex013AnimationTest/>
+				<Ex014FadeTest/>
 				<Ex010Bindings />
 				<Ex011StoreShop />
 				<Ex012StoreDashboard />
+				<Ex013AnimationTest/>
 			</section>
 		</section>
 		<div class="border-t border-gray-400 mt-8 pt-3">
