@@ -1,11 +1,5 @@
 <script lang="ts">
-	const userId = 999;
-	const products = [
-		"Product 900",
-		"Product 901",
-		"Product 902",
-		"Product 903",
-	];
+	import { cart } from "../stores";
 </script>
 
 <fieldset
@@ -13,12 +7,16 @@
 >
 	<legend class="font-mono text-gray-500">Ex012StoreDashboard</legend>
 	<div>
-		<p>User who is shopping: {userId}</p>
-		<p>There are {products.length} products in the cart:</p>
-		<ul>
-			{#each products as product}
-				<li>nnn</li>
-			{/each}
-		</ul>
+		{#if $cart.userId !== 0}
+			<p>User who is shopping: {$cart.userId}</p>
+			<p>There are {$cart.products.length} products in the cart:</p>
+			<ul>
+				{#each $cart.products as product}
+					<li>{product}</li>
+				{/each}
+			</ul>
+		{:else}
+			<p>Nobody is shopping at the moment.</p>
+		{/if}
 	</div>
 </fieldset>
