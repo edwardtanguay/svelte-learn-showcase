@@ -10,6 +10,8 @@
 	import Ex008ClickOnce from "./components/Ex008ClickOnce.svelte";
 	import Ex009EventDispatcher from "./components/Ex009EventDispatcher.svelte";
 	import Ex010Bindings from "./components/Ex010Bindings.svelte";
+	import Ex011StoreShop from "./components/Ex011StoreShop.svelte";
+	import Ex012StoreDashboard from "./components/Ex012StoreDashboard.svelte";
 	import Header from "./components/Header.svelte";
 
 	let parentMessageFor009 = "";
@@ -45,6 +47,8 @@
 				{@html parentMessageFor009}
 			</section>
 			<section>
+				<Ex011StoreShop />
+				<Ex012StoreDashboard />
 				<Ex010Bindings />
 			</section>
 		</section>
