@@ -7,3 +7,8 @@ export type Skill = {
 	name: string;
 	description: string;
 };
+
+export type Cart = {
+	userId: number;
+	products: string[];
+};
