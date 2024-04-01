@@ -35,10 +35,12 @@
 		<Ex010Bindings />
 	</section>
 	<section>
-		<Example>
+		<Example title="Ex016ToggleClass">
 			<Ex016ToggleClass />
 		</Example>
-		<Ex011StoreShop />
+		<Example title="Ex011StoreShop">
+			<Ex011StoreShop />
+		</Example>
 		<Ex012StoreDashboard />
 		<Ex013AnimationTest />
 		<Ex014FadeTest />
