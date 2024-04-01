@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { Router, Link, Route } from "svelte-routing";
 	import Ex000Images from "./components/Ex000Images.svelte";
 	import Ex001InteractiveTest from "./components/Ex001InteractiveTest.svelte";
 	import Ex002InteractiveArray from "./components/Ex002InteractiveArray.svelte";
@@ -15,6 +16,9 @@
 	import Ex013AnimationTest from "./components/Ex013AnimationTest.svelte";
 	import Ex014FadeTest from "./components/Ex014FadeTest.svelte";
 	import Header from "./components/Header.svelte";
+	import Welcome from "./routes/Welcome.svelte";
+	import Info from "./routes/Info.svelte";
+	import About from "./routes/About.svelte";
 
 	let parentMessageFor009 = "";
 
@@ -31,6 +35,18 @@
 <main>
 	<a id="top">
 		<Header />
+		<Router>
+			<nav>
+				<Link to="/">Welcome</Link>
+				<Link to="/info">Info</Link>
+				<Link to="/about">About</Link>
+			</nav>
+		<div>
+			<Route path="/" component={Welcome}/>
+			<Route path="/info" component={Info}/>
+			<Route path="/about" component={About}/>
+		</div>
+		</Router>
 		<section class="flex gap-6">
 			<section>
 				<Ex000Images />
@@ -49,11 +65,11 @@
 				{@html parentMessageFor009}
 			</section>
 			<section>
-				<Ex014FadeTest/>
+				<Ex014FadeTest />
 				<Ex010Bindings />
 				<Ex011StoreShop />
 				<Ex012StoreDashboard />
-				<Ex013AnimationTest/>
+				<Ex013AnimationTest />
 			</section>
 		</section>
 		<div class="border-t border-gray-400 mt-8 pt-3">
