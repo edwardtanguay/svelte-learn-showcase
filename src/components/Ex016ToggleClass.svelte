@@ -2,22 +2,16 @@
 	let highlighted = false;
 </script>
 
-<fieldset
-	class="border border-gray-400 mt-5 rounded w-fit px-3 pb-3 h-fit flex flex-col justify-center"
+<div
+	class="card font-mono flex items-center justify-center"
+	class:highlight={highlighted}
 >
-	<legend class="font-mono text-gray-500">Ex016ToggleClass</legend>
-
-	<div
-		class="card font-mono flex items-center justify-center"
-		class:highlight={highlighted}
-	>
-		<p>Toggle Test</p>
-	</div>
-	<button
-		class="bg-gray-300 px-2 pt-1 pb-2 rounded"
-		on:click={() => (highlighted = !highlighted)}>toggle</button
-	>
-</fieldset>
+	<p>Toggle Test</p>
+</div>
+<button
+	class="bg-gray-300 px-2 pt-1 pb-2 rounded"
+	on:click={() => (highlighted = !highlighted)}>toggle</button
+>
 
 <style>
 	.card {
