@@ -14,6 +14,7 @@
 	import Ex012StoreDashboard from "../components/Ex012StoreDashboard.svelte";
 	import Ex013AnimationTest from "../components/Ex013AnimationTest.svelte";
 	import Ex014FadeTest from "../components/Ex014FadeTest.svelte";
+	import Ex015FadeCounter from "../components/Ex015FadeCounter.svelte";
 
 	let parentMessageFor009 = "";
 
@@ -32,6 +33,7 @@
 		<Ex010Bindings />
 	</section>
 	<section>
+		<Ex015FadeCounter/>
 		<Ex011StoreShop />
 		<Ex012StoreDashboard />
 		<Ex013AnimationTest />
