@@ -2,3 +2,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	b {
+		@apply font-semibold;
+	}
+}
+
+
+a[aria-current="page"] {
+	color: rgb(255, 174, 0);
+}

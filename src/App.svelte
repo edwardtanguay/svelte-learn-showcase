@@ -16,65 +16,10 @@
 	import Ex013AnimationTest from "./components/Ex013AnimationTest.svelte";
 	import Ex014FadeTest from "./components/Ex014FadeTest.svelte";
 	import Header from "./components/Header.svelte";
-	import Welcome from "./routes/Welcome.svelte";
-	import Info from "./routes/Info.svelte";
-	import About from "./routes/About.svelte";
+	import Nav from "./components/Nav.svelte";
 
-	let parentMessageFor009 = "";
 
-	const handleProductPurchased = (e: any) => {
-		console.log(e);
-		parentMessageFor009 = `parent knows about purchase: 
-		<div class="border border-gray-700 rounded px-3 py-1 bg-gray-300 font-mono">
-			<p>Product: ${e.detail.product.title}</p>
-			<p>Price: ${e.detail.product.price}€</p>
-		</div>`;
-	};
 </script>
 
-<main>
-	<a id="top">
-		<Header />
-		<Router>
-			<nav>
-				<Link to="/">Welcome</Link>
-				<Link to="/info">Info</Link>
-				<Link to="/about">About</Link>
-			</nav>
-		<div>
-			<Route path="/" component={Welcome}/>
-			<Route path="/info" component={Info}/>
-			<Route path="/about" component={About}/>
-		</div>
-		</Router>
-		<section class="flex gap-6">
-			<section>
-				<Ex000Images />
-				<Ex001InteractiveTest />
-				<Ex002InteractiveArray />
-				<Ex002InteractiveArray nums={[5, 6, 7]} />
-				<Ex003HtmlRenderTest />
-				<Ex004EachBlock />
-				<Ex005AsyncTest />
-				<Ex006SimpleAsync />
-				<Ex007MovePointer />
-				<Ex008ClickOnce />
-				<Ex009EventDispatcher
-					on:productPurchased={handleProductPurchased}
-				/>
-				{@html parentMessageFor009}
-			</section>
-			<section>
-				<Ex014FadeTest />
-				<Ex010Bindings />
-				<Ex011StoreShop />
-				<Ex012StoreDashboard />
-				<Ex013AnimationTest />
-			</section>
-		</section>
-		<div class="border-t border-gray-400 mt-8 pt-3">
-			<a href="#top" class="underline">jump to top</a>
-		</div>
-		<a id="bottom"> </a>
-	</a>
-</main>
+<Header />
+<Nav/>
