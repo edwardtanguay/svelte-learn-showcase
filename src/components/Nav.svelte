@@ -6,7 +6,7 @@
 </script>
 
 <Router>
-	<nav class="mb-3 flex gap-3 bg-green-800 px-3 py-1 rounded text-gray-100">
+	<nav class="mb-3 flex gap-3 bg-[#005057] px-3 py-1 rounded text-gray-100">
 		<Link to="/">Welcome</Link>
 		<Link to="/info">Info</Link>
 		<Link to="/about">About</Link>

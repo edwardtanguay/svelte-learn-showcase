@@ -22,4 +22,5 @@
 			target="_blank">https://svelte-learn-showcase.vercel.app</a
 		>
 	</p>
+	<img src="images/svelte-programmer.jpg" class="rounded-lg mt-6 w-[30rem]" alt="programmer"/>
 </div>
