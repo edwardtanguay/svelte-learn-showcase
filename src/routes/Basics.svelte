@@ -34,6 +34,8 @@
 		<Ex002InteractiveArray />
 		<Ex002InteractiveArray nums={[5, 6, 7]} />
 		<Ex003HtmlRenderTest />
+	</section>
+	<section>
 		<Ex004EachBlock />
 		<Ex005AsyncTest />
 		<Ex006SimpleAsync />
@@ -41,12 +43,5 @@
 		<Ex008ClickOnce />
 		<Ex009EventDispatcher on:productPurchased={handleProductPurchased} />
 		{@html parentMessageFor009}
-	</section>
-	<section>
-		<Ex014FadeTest />
-		<Ex010Bindings />
-		<Ex011StoreShop />
-		<Ex012StoreDashboard />
-		<Ex013AnimationTest />
 	</section>
 </section>
