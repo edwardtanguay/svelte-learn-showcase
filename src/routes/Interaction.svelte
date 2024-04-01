@@ -41,7 +41,9 @@
 		<Example title="Ex011StoreShop">
 			<Ex011StoreShop />
 		</Example>
-		<Ex012StoreDashboard />
+		<Example title="Ex012StoreDashboard">
+			<Ex012StoreDashboard />
+		</Example>
 		<Ex013AnimationTest />
 		<Ex014FadeTest />
 		<Ex015FadeCounter />
