@@ -15,6 +15,7 @@
 	import Ex013AnimationTest from "../components/Ex013AnimationTest.svelte";
 	import Ex014FadeTest from "../components/Ex014FadeTest.svelte";
 	import Ex015FadeCounter from "../components/Ex015FadeCounter.svelte";
+	import Ex016ToggleClass from "../components/Ex016ToggleClass.svelte";
 
 	let parentMessageFor009 = "";
 
@@ -33,10 +34,11 @@
 		<Ex010Bindings />
 	</section>
 	<section>
-		<Ex015FadeCounter/>
+		<Ex016ToggleClass/>
 		<Ex011StoreShop />
 		<Ex012StoreDashboard />
 		<Ex013AnimationTest />
 		<Ex014FadeTest />
+		<Ex015FadeCounter/>
 	</section>
 </section>
