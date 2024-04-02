@@ -3,6 +3,7 @@
 	import Welcome from "../routes/Welcome.svelte";
 	import Basics from "../routes/Basics.svelte";
 	import Interaction from "../routes/Interaction.svelte";
+	import Async from "../routes/Async.svelte";
 </script>
 
 <Router>
@@ -10,11 +11,13 @@
 		<Link to="/">Welcome</Link>
 		<Link to="/basics">Basics</Link>
 		<Link to="/interaction">Interaction</Link>
+		<Link to="/async">Async</Link>
 	</nav>
 	<main>
 		<Route path="/" component={Welcome} />
 		<Route path="/basics" component={Basics} />
 		<Route path="/interaction" component={Interaction} />
+		<Route path="/async" component={Async} />
 	</main>
 </Router>
 
