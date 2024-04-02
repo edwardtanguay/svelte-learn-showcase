@@ -1,13 +1,15 @@
 <script lang="ts">
-	import { setContext } from "svelte";
+	import { setContext, onMount } from "svelte";
 	import { writable } from "svelte/store";
 	import { appStore } from "./stores";
 
 	let nums = writable([1, 2, 3, 4]);
 	let appTitle = writable("Main App");
 
-	setContext<string>("appTitle", $appTitle);
-	setContext<number[]>("nums", $nums);
+	// onMount(() => {
+		setContext<string>("appTitle", $appTitle);
+		setContext<number[]>("nums", $nums);
+	// });
 
 	// 2024-04-02 could not get appContext to work as in React
 	// it only works as read-only
