@@ -12,3 +12,9 @@ export type Cart = {
 	cartId: number;
 	products: string[];
 };
+
+export type HtmlColor = {
+	hex: string;
+	name: string;
+	textColor: string;
+};
