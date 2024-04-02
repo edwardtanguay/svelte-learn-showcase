@@ -1,14 +1,20 @@
 <script lang="ts">
 	import { getContext } from "svelte";
-	// import { writable, type Writable } from "svelte/store";
 
 	const appTitle = getContext<string>("appTitle");
-	const nums = getContext<number[]>("nums");
+	let nums = getContext<number[]>("nums");
+	// const addNumber = getContext<(num: number) => void>("addNumber");
 </script>
 
 <div>
 	<p class="mb-2">appTitle: {appTitle}</p>
-	<p class="mb-2">
-		There are {nums.length} numbers: {nums.join(', ')}
+	<p>
+		There are {nums.length} numbers: {nums.join(", ")}
 	</p>
+	<!-- <p class="mb-2">
+		<button
+			on:click={() => addNumber(1)}
+			class="bg-gray-300 px-2 py-1 rounded">Add Number</button
+		>
+	</p> -->
 </div>
