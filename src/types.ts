@@ -21,4 +21,5 @@ export type HtmlColor = {
 
 export type AppStore = {
 	siteName: string;
+	employees: Employee[]
 };
