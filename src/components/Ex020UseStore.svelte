@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { store } from "../stores";
+	import { appStore } from "../stores";
 </script>
 
 <div>
-	<p>site name: {$store.siteName}</p>
+	<p>site name: {$appStore.siteName}</p>
 </div>
