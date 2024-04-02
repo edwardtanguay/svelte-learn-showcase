@@ -61,7 +61,7 @@
 		},
 	];
 	let selectedToppings: any[] = [];
-	let productDescription = '';
+	let productDescription = "";
 
 	$: rangeMessage = `${range} (${((range / 25) * 100).toFixed(0)}%)`;
 	$: sendNewsletterMessage = sendNewsletter
@@ -90,95 +90,95 @@
 	const initialFocus = (el: HTMLInputElement) => {
 		el.focus();
 	};
-	$:productDescriptionMessage = `Total length is ${productDescription.trim().length} characters.`; 
+	$: productDescriptionMessage = `Total length is ${productDescription.trim().length} characters.`;
 </script>
 
-<fieldset
-	class="border border-gray-400 mt-5 rounded w-fit px-3 pb-3 h-fit flex flex-col justify-center"
->
-	<legend class="font-mono text-gray-500">Ex010Bindings</legend>
-	<div class="bg-yellow-300 p-3 rounded mt-1 mb-1">
-		Comment: <input type="text" bind:value={comment} use:initialFocus />
-		<p class="font-mono mt-2 bg-yellow-200 py-1 px-2">{comment}</p>
+<div class="bg-yellow-300 p-3 rounded mt-1 mb-1">
+	Comment: <input type="text" bind:value={comment} use:initialFocus />
+	<p class="font-mono mt-2 bg-yellow-200 py-1 px-2">{comment}</p>
+</div>
+<div class="bg-yellow-300 p-3 rounded mt-1 mb-1">
+	<div class="flex gap-2">
+		<div>Ranking: 0</div>
+		<input type="range" min="0" max="25" bind:value={range} />
+		<div>25</div>
 	</div>
-	<div class="bg-yellow-300 p-3 rounded mt-1 mb-1">
-		<div class="flex gap-2">
-			<div>Ranking: 0</div>
-			<input type="range" min="0" max="25" bind:value={range} />
-			<div>25</div>
-		</div>
-		<p class="font-mono mt-2 bg-yellow-200 py-1 px-2">{rangeMessage}</p>
+	<p class="font-mono mt-2 bg-yellow-200 py-1 px-2">{rangeMessage}</p>
+</div>
+<div class="bg-yellow-300 p-3 rounded mt-1 mb-1">
+	<div class="flex gap-2">
+		<label class="cursor-pointer select-none" for="sendNewsletter"
+			><input
+				type="checkbox"
+				bind:checked={sendNewsletter}
+				id="sendNewsletter"
+			/> Please send me the newsletter.</label
+		>
 	</div>
-	<div class="bg-yellow-300 p-3 rounded mt-1 mb-1">
-		<div class="flex gap-2">
-			<label class="cursor-pointer select-none" for="sendNewsletter"
-				><input
-					type="checkbox"
-					bind:checked={sendNewsletter}
-					id="sendNewsletter"
-				/> Please send me the newsletter.</label
-			>
-		</div>
-		<p class="font-mono mt-2 bg-yellow-200 py-1 px-2">
-			{sendNewsletterMessage}
-		</p>
+	<p class="font-mono mt-2 bg-yellow-200 py-1 px-2">
+		{sendNewsletterMessage}
+	</p>
+</div>
+<div class="bg-yellow-300 p-3 rounded mt-1 mb-1">
+	<div class="flex gap-2">
+		<select class="py-1 px-2 rounded" bind:value={selectedSendOption}>
+			{#each sendOptions as sendOption}
+				<option value={sendOption.idCode}>{sendOption.title}</option>
+			{/each}
+		</select>
 	</div>
-	<div class="bg-yellow-300 p-3 rounded mt-1 mb-1">
-		<div class="flex gap-2">
-			<select class="py-1 px-2 rounded" bind:value={selectedSendOption}>
-				{#each sendOptions as sendOption}
-					<option value={sendOption.idCode}>{sendOption.title}</option
-					>
-				{/each}
-			</select>
-		</div>
-		<p class="font-mono mt-2 bg-yellow-200 py-1 px-2">
-			{sendOptionMessage}
-		</p>
+	<p class="font-mono mt-2 bg-yellow-200 py-1 px-2">
+		{sendOptionMessage}
+	</p>
+</div>
+<div class="bg-yellow-300 p-3 rounded mt-1 mb-1">
+	<div class="flex gap-2">
+		{#each sizeOptions as sizeOption}
+			<div>
+				<input
+					type="radio"
+					id={sizeOption.idCode}
+					value={sizeOption.idCode}
+					bind:group={selectedSize}
+				/>
+				<label
+					class="select-none cursor-pointer"
+					for={sizeOption.idCode}>{sizeOption.title}</label
+				>
+			</div>
+		{/each}
 	</div>
-	<div class="bg-yellow-300 p-3 rounded mt-1 mb-1">
-		<div class="flex gap-2">
-			{#each sizeOptions as sizeOption}
-				<div>
-					<input
-						type="radio"
-						id={sizeOption.idCode}
-						value={sizeOption.idCode}
-						bind:group={selectedSize}
+	<p class="font-mono mt-2 bg-yellow-200 py-1 px-2">{sizeMessage}</p>
+</div>
+<div class="bg-yellow-300 p-3 rounded mt-1 mb-1">
+	<div class="flex gap-2 flex-col mb-3">
+		{#each toppingOptions as toppingOption}
+			<div>
+				<label
+					class="cursor-pointer select-none"
+					for={toppingOption.idCode}
+					><input
+						type="checkbox"
+						bind:group={selectedToppings}
+						value={toppingOption}
+						id={toppingOption.idCode}
 					/>
-					<label
-						class="select-none cursor-pointer"
-						for={sizeOption.idCode}>{sizeOption.title}</label
-					>
-				</div>
-			{/each}
-		</div>
-		<p class="font-mono mt-2 bg-yellow-200 py-1 px-2">{sizeMessage}</p>
+					{toppingOption.title} - {toppingOption.price.toFixed(2)}
+					€</label
+				>
+			</div>
+		{/each}
 	</div>
-	<div class="bg-yellow-300 p-3 rounded mt-1 mb-1">
-		<div class="flex gap-2 flex-col mb-3">
-			{#each toppingOptions as toppingOption}
-				<div>
-					<label
-						class="cursor-pointer select-none"
-						for={toppingOption.idCode}
-						><input
-							type="checkbox"
-							bind:group={selectedToppings}
-							value={toppingOption}
-							id={toppingOption.idCode}
-						/>
-						{toppingOption.title} - {toppingOption.price.toFixed(2)}
-						€</label
-					>
-				</div>
-			{/each}
-		</div>
-		<p class="font-mono mt-2 bg-yellow-200 py-1 px-2">{toppingMessage}</p>
-	</div>
-	<div class="bg-yellow-300 p-3 rounded mt-1 mb-1">
-		<p class="mb-1">Product Description:</p>
-		<textarea class="w-full" bind:value={productDescription} spellcheck="false" />
-		<p class="font-mono mt-2 bg-yellow-200 py-1 px-2">{productDescriptionMessage}</p>
-	</div>
-</fieldset>
+	<p class="font-mono mt-2 bg-yellow-200 py-1 px-2">{toppingMessage}</p>
+</div>
+<div class="bg-yellow-300 p-3 rounded mt-1 mb-1">
+	<p class="mb-1">Product Description:</p>
+	<textarea
+		class="w-full"
+		bind:value={productDescription}
+		spellcheck="false"
+	/>
+	<p class="font-mono mt-2 bg-yellow-200 py-1 px-2">
+		{productDescriptionMessage}
+	</p>
+</div>

@@ -32,20 +32,28 @@
 
 <section class="flex gap-6">
 	<section>
-		<Ex010Bindings />
+		<Example title="Ex010Bindings">
+			<Ex010Bindings />
+		</Example>
 	</section>
 	<section>
-		<Example title="Ex016ToggleClass">
-			<Ex016ToggleClass />
-		</Example>
 		<Example title="Ex011StoreShop">
 			<Ex011StoreShop />
 		</Example>
 		<Example title="Ex012StoreDashboard">
 			<Ex012StoreDashboard />
 		</Example>
-		<Ex013AnimationTest />
-		<Ex014FadeTest />
-		<Ex015FadeCounter />
+		<Example title="Ex013AnimationTest">
+			<Ex013AnimationTest />
+		</Example>
+		<Example title="Ex014FadeTest">
+			<Ex014FadeTest />
+		</Example>
+		<Example title="Ex015FadeCounter">
+			<Ex015FadeCounter />
+		</Example>
+		<Example title="Ex016ToggleClass">
+			<Ex016ToggleClass />
+		</Example>
 	</section>
 </section>

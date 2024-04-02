@@ -29,5 +29,5 @@
 			target="_blank">https://tanguay-eu.vercel.app/howtos/851</a
 		>
 	</p>
-	<img src="images/svelte-programmer.jpg" class="rounded-lg mt-6 w-[30rem]" alt="programmer"/>
+	<img src="images/svelte-programmer.jpg" class="rounded-lg mt-6 w-[30rem] shadow-lg shadow-gray-600" alt="programmer"/>
 </div>
