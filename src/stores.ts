@@ -1,5 +1,3 @@
-import { onMount } from "svelte";
-
 import { getEmployees } from "./appData";
 
 import { writable } from "svelte/store";
@@ -9,11 +7,11 @@ export const cart = writable<Cart>({ cartId: 0, products: [] });
 
 export const appStore = writable<AppStore>({
 	siteName: "The Main Site",
-	employees: await getEmployees()
+	employees: await getEmployees(),
 });
 
-console.log(appStore);
-
-// onMount(async () => {
-// 	appStore.siteName = await getEmployees();
-// });
+// const removeEmployee = () => {
+// 	const _appStore = structuredClone(appStore);
+// 	_appStore.employees.pop();
+// 	appStore = structuredClone(_appStore);
+// };
