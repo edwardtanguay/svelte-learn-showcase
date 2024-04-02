@@ -14,6 +14,7 @@
 	import Ex012StoreDashboard from "../components/Ex012StoreDashboard.svelte";
 	import Ex013AnimationTest from "../components/Ex013AnimationTest.svelte";
 	import Ex014FadeTest from "../components/Ex014FadeTest.svelte";
+	import Example from "../components/Example.svelte";
 
 	let parentMessageFor009 = "";
 
@@ -29,15 +30,29 @@
 
 <section class="flex gap-6">
 	<section>
-		<Ex000Images />
-		<Ex001InteractiveTest />
-		<Ex002InteractiveArray />
-		<Ex002InteractiveArray nums={[5, 6, 7]} />
-		<Ex003HtmlRenderTest />
+		<Example title="Ex000Images">
+			<Ex000Images />
+		</Example>
+		<Example title="Ex001InteractiveTest">
+			<Ex001InteractiveTest />
+		</Example>
+		<Example title="Ex002InteractiveArray">
+			<Ex002InteractiveArray />
+		</Example>
+		<Example title="Ex002InteractiveArray">
+			<Ex002InteractiveArray nums={[5, 6, 7]} />
+		</Example>
+		<Example title="Ex003HtmlRenderTest">
+			<Ex003HtmlRenderTest />
+		</Example>
 	</section>
 	<section>
-		<Ex004EachBlock />
-		<Ex005AsyncTest />
+		<Example title="Ex004EachBlock">
+			<Ex004EachBlock />
+		</Example>
+		<Example title="Ex005AsyncTest">
+			<Ex005AsyncTest />
+		</Example>
 		<Ex006SimpleAsync />
 		<Ex007MovePointer />
 		<Ex008ClickOnce />
