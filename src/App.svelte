@@ -1,7 +1,10 @@
 <script lang="ts">
+	import AppContext from "./AppContext.svelte";
 	import Header from "./components/Header.svelte";
 	import Nav from "./components/Nav.svelte";
 </script>
 
-<Header />
-<Nav />
+<AppContext>
+	<Header />
+	<Nav />
+</AppContext>
