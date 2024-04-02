@@ -59,8 +59,14 @@
 		<Example title="Ex007MovePointer">
 			<Ex007MovePointer />
 		</Example>
-		<Ex008ClickOnce />
-		<Ex009EventDispatcher on:productPurchased={handleProductPurchased} />
+		<Example title="Ex008ClickOnce">
+			<Ex008ClickOnce />
+		</Example>
+		<Example title="Ex009EventDispatcher">
+			<Ex009EventDispatcher
+				on:productPurchased={handleProductPurchased}
+			/>
+		</Example>
 		{@html parentMessageFor009}
 	</section>
 </section>

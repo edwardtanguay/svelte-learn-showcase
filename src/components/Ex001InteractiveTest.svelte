@@ -15,6 +15,6 @@
 <p>
 	<button
 		on:click={changeMessage}
-		class="bg-gray-300 pt-1 px-3 text-black rounded">change text</button
+		class="bg-gray-300 pb-1 px-3 text-black rounded">change text</button
 	>
 </p>
