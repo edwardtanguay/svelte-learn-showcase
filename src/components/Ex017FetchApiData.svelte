@@ -2,6 +2,7 @@
 	import { onMount } from "svelte";
 	import type { HtmlColor } from "../types";
 
+	let searchText = "";
 	let htmlColors: HtmlColor[] = [];
 
 	const fetchHtmlColors = async () => {
@@ -24,10 +25,13 @@
 	const getTextColor = (textColor: string) => {
 		return textColor === "dark" ? "black" : "white";
 	};
+
+	$:filteredHtmlColors = htmlColors.filter(m => m.name.toLowerCase().includes(searchText.toLowerCase()));
 </script>
 
 <div>
-	{#each htmlColors as htmlColor}
+	<input class="w-full mb-2 p-1 rounded placeholder-gray-300" placeholder="search" bind:value={searchText}/>
+	{#each filteredHtmlColors as htmlColor}
 		<div
 			class="border border-gray-300 mb-1 text-sm flex justify-between p-1"
 			style="background-color: {htmlColor.hex};color: {getTextColor(
