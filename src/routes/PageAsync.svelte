@@ -2,6 +2,7 @@
 	import Ex017FetchApiData from "../components/Ex017FetchApiData.svelte";
 	import Ex018UseAppContext from "../components/Ex018UseAppContext.svelte";
 	import Ex019UseAppContext from "../components/Ex019UseAppContext.svelte";
+	import Ex020UseStore from "../components/Ex020UseStore.svelte";
 	import Example from "../components/Example.svelte";
 </script>
 
@@ -17,6 +18,9 @@
 		</Example>
 		<Example title="Ex019UseAppContext">
 			<Ex019UseAppContext/>
+		</Example>
+		<Example title="Ex020UseStore">
+			<Ex020UseStore/>
 		</Example>
 	</section>
 </section>
