@@ -1,12 +1,12 @@
 <script lang="ts">
-	import Ex010Bindings from "../components/Ex010Bindings.svelte";
+	import Ex017FetchApiData from "../components/Ex017FetchApiData.svelte";
 	import Example from "../components/Example.svelte";
 </script>
 
 <section class="flex gap-6">
 	<section>
-		<Example title="Ex010Bindings">
-			<Ex010Bindings />
+		<Example title="Ex017FetchApiData">
+			<Ex017FetchApiData/>
 		</Example>
 	</section>
 </section>

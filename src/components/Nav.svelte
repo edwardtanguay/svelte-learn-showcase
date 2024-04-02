@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { Router, Link, Route } from "svelte-routing";
-	import Welcome from "../routes/Welcome.svelte";
-	import Basics from "../routes/Basics.svelte";
-	import Interaction from "../routes/Interaction.svelte";
-	import Async from "../routes/Async.svelte";
+	import PageWelcome from "../routes/PageWelcome.svelte";
+	import PageBasics from "../routes/PageBasics.svelte";
+	import PageInteraction from "../routes/PageInteraction.svelte";
+	import PageAsync from "../routes/PageAsync.svelte";
 </script>
 
 <Router>
@@ -14,10 +14,10 @@
 		<Link to="/async">Async</Link>
 	</nav>
 	<main>
-		<Route path="/" component={Welcome} />
-		<Route path="/basics" component={Basics} />
-		<Route path="/interaction" component={Interaction} />
-		<Route path="/async" component={Async} />
+		<Route path="/" component={PageWelcome} />
+		<Route path="/basics" component={PageBasics} />
+		<Route path="/interaction" component={PageInteraction} />
+		<Route path="/async" component={PageAsync} />
 	</main>
 </Router>
 
