@@ -7,8 +7,8 @@
 </script>
 
 <div>
-	<p class="mb-2">appTitle: {appTitle}</p>
+	<p class="mb-2">appTitle has {appTitle.length} characters</p>
 	<p class="mb-2">
-		There are {nums.length} numbers: {nums.join(', ')}
+		The sum of the numbers is {nums.reduce((total, num) => total + num, 0)}.
 	</p>
 </div>

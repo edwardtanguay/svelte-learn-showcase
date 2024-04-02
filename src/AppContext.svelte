@@ -1,10 +1,11 @@
 <script lang="ts">
 	import { setContext } from "svelte";
 
-	const nums = [1, 2, 3];
+	const nums = [1, 2, 3, 4];
 
-	setContext("appTitle", "The Main App");
-	setContext("nums", nums);
+	setContext<string>("appTitle", "Main App");
+	setContext<number[]>("nums", nums);
+	setContext
 </script>
 
 <slot />
