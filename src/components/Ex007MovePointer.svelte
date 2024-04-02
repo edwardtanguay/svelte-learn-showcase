@@ -6,10 +6,6 @@
 	};
 </script>
 
-<fieldset
-	class="border border-gray-400 mt-5 rounded w-[15rem] px-3 h-[15rem] flex place-items-center"
-	on:pointermove={handlePointerMove}
->
-	<legend class="font-mono text-gray-500">Ex007MovePointer</legend>
+<div class="w-[15rem] h-[15rem] flex place-items-center" on:pointermove={handlePointerMove}>
 	<p class="mb-2 w-full text-center">{@html message}</p>
-</fieldset>
+</div>

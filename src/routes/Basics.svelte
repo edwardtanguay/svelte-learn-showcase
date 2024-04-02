@@ -53,8 +53,12 @@
 		<Example title="Ex005AsyncTest">
 			<Ex005AsyncTest />
 		</Example>
-		<Ex006SimpleAsync />
-		<Ex007MovePointer />
+		<Example title="Ex006SimpleAsync">
+			<Ex006SimpleAsync />
+		</Example>
+		<Example title="Ex007MovePointer">
+			<Ex007MovePointer />
+		</Example>
 		<Ex008ClickOnce />
 		<Ex009EventDispatcher on:productPurchased={handleProductPurchased} />
 		{@html parentMessageFor009}
