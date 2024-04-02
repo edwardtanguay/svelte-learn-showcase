@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { setContext, onMount } from "svelte";
 	import { writable } from "svelte/store";
-	import { appStore } from "./stores";
+	// import { appStore } from "./stores";
 
 	let nums = writable([1, 2, 3, 4]);
 	let appTitle = writable("Main App");
