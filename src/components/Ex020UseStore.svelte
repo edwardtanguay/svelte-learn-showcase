@@ -1,7 +1,7 @@
 <script lang="ts">
-	const message = 'ex20';
+	import { store } from "../stores";
 </script>
 
 <div>
-	<p>{message}</p>
+	<p>site name: {$store.siteName}</p>
 </div>

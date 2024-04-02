@@ -18,3 +18,7 @@ export type HtmlColor = {
 	name: string;
 	textColor: string;
 };
+
+export type AppStore = {
+	siteName: string;
+};
