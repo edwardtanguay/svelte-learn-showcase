@@ -5,7 +5,7 @@ import GameInfoBar from "../components/GameInfoBar.svelte";
 	import { gameFooterMessage } from "../stores";
 </script>
 
-<div class="w-full flex justify-center mt-6">
+<div class="theGame w-full flex justify-center mt-6">
 	<div>
 		<GameInfoBar title="The Game 🚩" />
 		<GamePlayArea />

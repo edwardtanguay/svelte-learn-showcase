@@ -1,4 +1,6 @@
 <script lang="ts">
+	import "@fontsource/roboto";
+
 	export let title = "<none>";
 </script>
 
@@ -10,7 +12,7 @@
 		height: 10vmin;
 		background: purple;
 		color: yellow;
-		font-family: sans-serif;
+		font-family: 'Roboto';
 		display: flex;
 		align-items: center;
 		justify-content: center;
