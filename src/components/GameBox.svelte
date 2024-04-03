@@ -14,8 +14,9 @@
 
 	const handleClickedEmoji = () => {
 		$gameNumberOfTimesClicks++;
-		$gameFooterMessage = `${$gameNumberOfTimesClicks} emoji${$gameNumberOfTimesClicks === 1 ? '' : 's'} clicked`;
-	}
+		$gameFooterMessage = `${$gameNumberOfTimesClicks} emoji${$gameNumberOfTimesClicks === 1 ? "" : "s"} clicked`;
+		getNewEmoji();
+	};
 </script>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
