@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Ex017FetchApiData from "../components/Ex017FetchApiData.svelte";
-	import Ex018UseAppContext from "../components/Ex018UseAppContext.svelte";
-	import Ex019UseAppContext from "../components/Ex019UseAppContext.svelte";
-	import Ex020UseStore from "../components/Ex020UseStore.svelte";
-	import Ex021UseStore from "../components/Ex021UseStore.svelte";
+	import Ex017FetchApiData from "../components/examples/Ex017FetchApiData.svelte";
+	import Ex018UseAppContext from "../components/examples/Ex018UseAppContext.svelte";
+	import Ex019UseAppContext from "../components/examples/Ex019UseAppContext.svelte";
+	import Ex020UseStore from "../components/examples/Ex020UseStore.svelte";
+	import Ex021UseStore from "../components/examples/Ex021UseStore.svelte";
 	import Example from "../components/Example.svelte";
 </script>
 

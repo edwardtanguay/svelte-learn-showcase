@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { appStore } from "../stores";
+	import { appStore } from "../../stores";
 	// import {removeEmployee} from '../storeFunctions.svelte';
 
 	const removeEmployee = () => {

@@ -7,8 +7,8 @@
 	let appTitle = writable("Main App");
 
 	// onMount(() => {
-		setContext<string>("appTitle", $appTitle);
-		setContext<number[]>("nums", $nums);
+	setContext<string>("appTitle", $appTitle);
+	setContext<number[]>("nums", $nums);
 	// });
 
 	// 2024-04-02 could not get appContext to work as in React
@@ -32,5 +32,4 @@
 	// };
 </script>
 
-<button on:click={() => changeApptitle("ksjdfksdfj")}>test</button>
 <slot />

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { getSkills } from "../appData";
+	import { getSkills } from "../../appData";
 
 	const skillsPromise = getSkills();
 </script>

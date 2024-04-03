@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from "svelte";
-	import type { HtmlColor } from "../types";
+	import type { HtmlColor } from "../../types";
 
 	let searchText = "";
 	let htmlColors: HtmlColor[] = [];

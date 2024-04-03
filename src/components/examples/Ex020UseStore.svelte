@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { appStore } from "../stores";
+	import { appStore } from "../../stores";
 
 	export const changeSiteName = (siteName: string) => {
 		$appStore.siteName = siteName;
