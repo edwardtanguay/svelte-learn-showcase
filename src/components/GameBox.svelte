@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { emojis } from "../appData";
+	import { gameFooterMessage, gameNumberOfTimesClicks } from "../stores";
 
 	let emoji = "";
 
@@ -10,11 +11,16 @@
 	};
 
 	getNewEmoji();
+
+	const handleClickedEmoji = () => {
+		$gameNumberOfTimesClicks++;
+		$gameFooterMessage = `${$gameNumberOfTimesClicks} emoji${$gameNumberOfTimesClicks === 1 ? '' : 's'} clicked`;
+	}
 </script>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<div class="box cursor-pointer select-none" on:click={getNewEmoji}>
+<div class="box cursor-pointer select-none" on:click={handleClickedEmoji}>
 	<p>{emoji}</p>
 </div>
 
