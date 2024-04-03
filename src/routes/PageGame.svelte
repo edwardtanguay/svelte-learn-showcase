@@ -1,5 +1,6 @@
 <script>
-	import GameInfoBar from "../components/GameInfoBar.svelte";
+	import GameCollectionArea from "../components/GameCollectionArea.svelte";
+import GameInfoBar from "../components/GameInfoBar.svelte";
 	import GamePlayArea from "../components/GamePlayArea.svelte";
 	import { gameFooterMessage } from "../stores";
 </script>
@@ -9,5 +10,6 @@
 		<GameInfoBar title="The Game 🚩" />
 		<GamePlayArea />
 		<GameInfoBar title={$gameFooterMessage} />
+		<GameCollectionArea/>
 	</div>
 </div>

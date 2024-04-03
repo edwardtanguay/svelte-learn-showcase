@@ -10,11 +10,6 @@ export const appStore = writable<AppStore>({
 	employees: await getEmployees(),
 });
 
-export let gameFooterMessage = writable<string>('Click to Count');
+export let gameFooterMessage = writable<string>("Click to Count");
 export let gameNumberOfTimesClicks = writable<number>(0);
-
-// const removeEmployee = () => {
-// 	const _appStore = structuredClone(appStore);
-// 	_appStore.employees.pop();
-// 	appStore = structuredClone(_appStore);
-// };
+export let gameCollection = writable<string>("");

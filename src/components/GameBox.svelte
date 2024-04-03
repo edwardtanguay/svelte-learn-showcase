@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { emojis } from "../appData";
-	import { gameFooterMessage, gameNumberOfTimesClicks } from "../stores";
+	import { gameCollection, gameFooterMessage, gameNumberOfTimesClicks } from "../stores";
 
 	let emoji = "";
 
@@ -15,6 +15,7 @@
 	const handleClickedEmoji = () => {
 		$gameNumberOfTimesClicks++;
 		$gameFooterMessage = `${$gameNumberOfTimesClicks} emoji${$gameNumberOfTimesClicks === 1 ? "" : "s"} clicked`;
+		$gameCollection += emoji;
 		getNewEmoji();
 	};
 </script>
