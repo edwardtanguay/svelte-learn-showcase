@@ -5,7 +5,7 @@
 
 <div class="w-full flex justify-center mt-6">
 	<div>
-		<GameInfoBar title="The Game" />
+		<GameInfoBar title="The Game 🚩" />
 		<GamePlayArea />
 		<GameInfoBar title="Play for Fun" />
 	</div>
