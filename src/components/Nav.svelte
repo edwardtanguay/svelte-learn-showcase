@@ -4,6 +4,7 @@
 	import PageBasics from "../routes/PageBasics.svelte";
 	import PageInteraction from "../routes/PageInteraction.svelte";
 	import PageAsync from "../routes/PageAsync.svelte";
+	import PageGame from "../routes/PageGame.svelte";
 </script>
 
 <Router>
@@ -12,15 +13,16 @@
 		<Link to="/basics">Basics</Link>
 		<Link to="/interaction">Interaction</Link>
 		<Link to="/async">Async</Link>
+		<Link to="/game">Game</Link>
 	</nav>
-	<main>
+	<main class="w-full">
 		<Route path="/" component={PageWelcome} />
 		<Route path="/basics" component={PageBasics} />
 		<Route path="/interaction" component={PageInteraction} />
 		<Route path="/async" component={PageAsync} />
+		<Route path="/game" component={PageGame} />
 	</main>
 </Router>
 
 <style>
-
 </style>
