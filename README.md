@@ -3,7 +3,7 @@
 - repo: https://github.com/edwardtanguay/svelte-learn-showcase
 - live: https://svelte-learn-showcase.vercel.app
 
-![grafik](https://github.com/edwardtanguay/svelte-learn-showcase/assets/446574/eedc3a43-f59c-4dcb-aed3-8d187d39b609)
+![grafik](https://github.com/edwardtanguay/svelte-learn-showcase/assets/446574/3eeebc5e-8a59-4241-b986-27978f20600c)
 
 ## setup and start
 
