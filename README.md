@@ -8,5 +8,5 @@
 ## setup and start
 
 - clone locally
-- `npm ii`
+- `npm i`
 - `npm run dev`
